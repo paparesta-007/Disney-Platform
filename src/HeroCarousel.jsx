@@ -45,7 +45,7 @@ function HeroCarousel() {
             alt="Overlay"
           />
           <span className=" text-white font-bold">Nomination ai BAFTA</span>
-          <div className="flex">
+          <div className="flex ">
             <div className="bg-[#30313c] mr-2 w-auto px-1 rounded text-white">6+</div>
             <span className="text-[#a8a9ad]">2024 ⋅ Adolescenza, Animatione</span>
           </div>
