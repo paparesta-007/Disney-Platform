@@ -1,58 +1,76 @@
 @import "tailwindcss";
 
 .NavBarBackground {
-     background: linear-gradient(to bottom, #08090d 0%, #181a25 100%);
+  background: linear-gradient(to bottom, #08090d 0%, #181a25 100%);
 }
-body{
+/* La classe NavBarBackground e il corpo rimangono invariati */
+
+/* Stile per il body */
+body {
      background: linear-gradient(to bottom, #181a25 0%, #282d3d 100%);
      background-color: #282d3d;
-     /* height: 100%; */
      background-repeat: no-repeat;
      background-attachment: fixed;
      width: 100%;
-
-}
-
-.navbarLinkA {
+     margin: 0;
+   }
+   
+   /* Link della navbar */
+   .navbarLinkA {
      position: relative;
      display: inline-block;
-     padding-bottom: 5px; /* Optional: Add some padding to give space for the border */
-     text-decoration: none; /* Remove underline if any */
-     
- }
- 
- .navbarLinkA::after {
+     padding-bottom: 5px;
+     text-decoration: none;
+   }
+   
+   .navbarLinkA::after {
      content: "";
      position: absolute;
      bottom: 0;
      left: 0;
-     width: 0; /* Start with no border */
-     height: 2px; /* Border thickness */
-     background-color: #fff; /* Change to desired color */
-     transition: width 0.3s ease; /* Smooth transition */
- }
- 
- .navbarLinkA:hover::after {
-     width: 100%; /* Expand to full width on hover */
- }
- 
- .carousel-cell {
-     height: 65vh;
-     aspect-ratio: 3 / 1; /* Per un ratio 16:9. Se preferisci un look più cinematografico, usa 2.39/1 */
-     margin-right: 20px;
-     transition: all 0.2s ;
+     width: 0;
+     height: 2px;
+     background-color: #fff;
+     transition: width 0.3s ease;
+   }
+   
+   .navbarLinkA:hover::after {
+     width: 100%;
+   }
+   .carousel {
+     width: 100%; /* Larghezza del carosello */
+     position: relative; /* Necessario per il padding-bottom */
+   }
+   
+   .carousel-cell {
+     width: 90%; /* Si adatta alla larghezza del carosello */
+     position: absolute; /* Per fare in modo che il padding-bottom funzioni correttamente */
+     top: 0;
+     left: 0;
+     margin: 20px 10px;
+     transition: all 0.2s;
      display: flex;
      justify-content: center;
      align-items: center;
      border-radius: 10px;
-     overflow: hidden; /* Importante per evitare che il contenuto esca dai bordi */
- }
- 
- .carousel-cell img {
+     overflow: hidden;
+     box-shadow: 0 10px 10px #090a0f;
+   }
+   
+   .carousel-cell img {
      width: 100%;
      height: 100%;
-     object-fit: cover; /* L'immagine riempie la cella mantenendo il suo rapporto */
- }
- .carousel-cell:hover{
+     object-fit: cover;
+   }
+   
+   
+   /* Aggiungi un bordo sulle celle quando sono hoverate */
+   .carousel-cell:hover {
      border: 3px solid white;
- }
+   }
+   
+@media (max-width:1050px) {
+     .NavBarBackground>ul>li>a{
+          display: none;
+     }
+}
