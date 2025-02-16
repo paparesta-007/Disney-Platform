@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+.NavBarBackground {
+     background: linear-gradient(to bottom, #08090d 0%, #181a25 100%);
+}
+body{
+     background: linear-gradient(to bottom, #181a25 0%, #282d3d 100%);
+     background-color: #282d3d;
+     /* height: 100%; */
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     width: 100%;
+
+}
+nav{
+     border: 1px solid yellow !important;
+}
+.navbarLinkA {
+     position: relative;
+     display: inline-block;
+     padding-bottom: 5px; /* Optional: Add some padding to give space for the border */
+     text-decoration: none; /* Remove underline if any */
+     
+ }
+ 
+ .navbarLinkA::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0; /* Start with no border */
+     height: 2px; /* Border thickness */
+     background-color: #fff; /* Change to desired color */
+     transition: width 0.3s ease; /* Smooth transition */
+ }
+ 
+ .navbarLinkA:hover::after {
+     width: 100%; /* Expand to full width on hover */
+ }
+ 
+
+ .carousel {
+     width: 100%;
+     margin: 0 auto;
+   }
+   
+   .carousel-cell {
+     width: 300px;
+     height: 200px;
+     margin-right: 10px;
+     background-color: #f3f3f3;
+     border-radius: 8px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 24px;
+   }
+   
