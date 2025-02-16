@@ -12,9 +12,7 @@ body{
      width: 100%;
 
 }
-nav{
-     border: 1px solid yellow !important;
-}
+
 .navbarLinkA {
      position: relative;
      display: inline-block;
@@ -38,21 +36,23 @@ nav{
      width: 100%; /* Expand to full width on hover */
  }
  
-
- .carousel {
-     width: 100%;
-     margin: 0 auto;
-   }
-   
-   .carousel-cell {
-     width: 300px;
-     height: 200px;
-     margin-right: 10px;
-     background-color: #f3f3f3;
-     border-radius: 8px;
+ .carousel-cell {
+     height: 65vh;
+     aspect-ratio: 2.8 / 1; /* Per un ratio 16:9. Se preferisci un look più cinematografico, usa 2.39/1 */
+     margin-right: 20px;
+     transition: all 0.2s ease-in;
      display: flex;
      justify-content: center;
      align-items: center;
-     font-size: 24px;
-   }
-   
+     border-radius: 10px;
+     overflow: hidden; /* Importante per evitare che il contenuto esca dai bordi */
+ }
+ 
+ .carousel-cell img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover; /* L'immagine riempie la cella mantenendo il suo rapporto */
+ }
+ .carousel-cell:hover{
+     border: 3px solid white;
+ }
