@@ -35,7 +35,7 @@ function HomeFranchiseCards() {
   return (
     <div className="flex space-x-4 p-2 mx-20 mt-8">
       {data.map(({ imgSrc, videoSrc }, index) => (
-        <div key={index} className="card rounded-lg relative overflow-hidden"onMouseEnter={() => handleMouseEnter(index)}  onMouseLeave={() => handleMouseLeave(index)}>
+        <div key={index} className="card rounded-[12px] relative overflow-hidden"onMouseEnter={() => handleMouseEnter(index)}  onMouseLeave={() => handleMouseLeave(index)}>
           <video  ref={(el) => (videoRefs.current[index] = el)}  src={videoSrc} muted loop playsInline  ></video>
           <img src={imgSrc} alt="" />
         </div>
