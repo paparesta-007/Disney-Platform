@@ -1,0 +1,25 @@
+  /* Link della navbar */
+  .NavBarBackground {
+    background: linear-gradient(to bottom, #08090d 30%, #12141e 100%);
+  }
+  .navbarLinkA {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+  
+  .navbarLinkA::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  .navbarLinkA:hover::after {
+    width: 100%;
+  }

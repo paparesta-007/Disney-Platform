@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Flickity from "flickity";
 import "flickity/css/flickity.css";
-
+import "./css/HeroCarousel.css";
 function HeroCarousel() {
   const carouselRef = useRef(null);
 
