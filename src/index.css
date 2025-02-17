@@ -5,8 +5,8 @@
 
 /* Stile per il body */
 body {
-     background: linear-gradient(to bottom, #12141e 60%, #10121b 100%);
-     background-color: #282d3d;
+     background: linear-gradient(to bottom, #08090d 0%, #10121b 100%);
+     /* background-color: #282d3d; */
      background-repeat: no-repeat;
      background-attachment: fixed;
      width: 100%;

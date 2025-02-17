@@ -1,14 +1,23 @@
   /* Link della navbar */
-  .NavBarBackground {
-    background: linear-gradient(to bottom, #08090d 30%, #12141e 100%);
-  }
+
   .navbarLinkA {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
     text-decoration: none;
+
   }
-  
+.NavBarBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 50%);
+}
+
   .navbarLinkA::after {
     content: "";
     position: absolute;
