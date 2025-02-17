@@ -73,3 +73,6 @@
 .flickity-page-dot:focus{
     box-shadow: none;
 }
+.flickity-page-dots{
+    bottom: -10px;
+}
