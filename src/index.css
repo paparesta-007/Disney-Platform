@@ -6,16 +6,20 @@
 /* Stile per il body */
 body {
      background: linear-gradient(to bottom, #08090d 0%, #10121b 100%);
-     /* background-color: #282d3d; */
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     width: 100%;
-     margin: 0;
-     overflow-y: scroll;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+  overflow-y: auto;
+  position: relative;
    }
    
  
-   
+   .PaginaSfumata {
+     background: linear-gradient(to bottom, transparent 0%,rgba(26,29,41,0.8) 40%, rgba(26,29,41,0.8) 100%);
+     position: relative; /* Aggiungi relative per tenere il contenuto sopra il gradiente */
+     z-index: 1; /* Assicurati che il contenuto scorra sopra il gradiente */
+   }
 
 @media (max-width:1050px) {
      .NavBarBackground>ul>li>a{

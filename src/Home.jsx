@@ -6,7 +6,7 @@ function Home(){
     return(
         <>
         <Navbar />
-        <div className="mt-16"></div>
+        <div className=""></div>
         <HeroCarousel />
         <HomeFranchiseCards />
         </>

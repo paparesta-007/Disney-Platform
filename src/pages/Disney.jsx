@@ -1,13 +1,14 @@
 import Navbar from "../Navbar";
 import DisneyOpening from "../assets/video/openingScene/DisneyOpening2.mp4";
-
+import "../index.css";
+import "../css/Navbar.css";
+import Carousel from "../carousel";
 function DisneyPage() {
   const apiUrl = "https://apidisneymovies.bsite.net/api/v1/movies/all?details=true";
 
   function HandleEnd(e) {
     e.target.pause();
   }
-  const backgroundCardContainer="background-color: rgba(26, 29, 41, 0.9);"
   function FetchData() {
     fetch(apiUrl)
       .then(response => response.json())
@@ -30,35 +31,29 @@ function DisneyPage() {
         />
 
         {/* Contenuto scrollabile che va sopra il video */}
-        <div className="relative z-10">
-          <div className="min-h-screen px-6 py-4">
+        <div className="relative z-2  PaginaSfumata">
+          <div className=" px-6 py-4">
             <div className="h-[50vh]">
               ciaoo
             </div>
-            <div className=" text-white p-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat libero. Veniam, neque culpa eum obcaecati eligendi recusandae voluptatibus ratione? Fugiat ratione iste sapiente officia maxime debitis illum, culpa id.</p>
-              {/* Altri paragrafi */}
+            <div>
+              <h2 className="text-xl font-bold text-[#99989c]">In primo piano</h2>
+              <Carousel 
+                data={[{
+                    title: "Miraculous",
+                    imageSrc: "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/bc78d686-d754-4aa7-8bbd-21a00b890263/compose?format=webp&label=standard_art_178&width=800",
+                    description: "Miraculous - Le storie di Ladybug e Chat Noir"
+                  },{
+                    title:"La sirenetta",
+                    imageSrc:"https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/d237f39b-e81e-4134-9235-675c0cc0ba38/compose?format=webp&label=standard_art_178&width=800",
+                    description:"La sirenetta"
+                  },
+                  {
+                    title:"Il re leone",
+                    imageSrc:"https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/1c1de1b8-02fb-4f16-926b-582b6112d1ba/compose?format=webp&label=standard_art_disney-original_178&width=800",
+                    description:"Il re leone"
+                  }]}
+              />
             </div>
           </div>
         </div>

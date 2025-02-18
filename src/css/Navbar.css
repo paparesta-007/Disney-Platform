@@ -8,7 +8,7 @@
 
   }
 .NavBarBackground {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -31,4 +31,22 @@
   
   .navbarLinkA:hover::after {
     width: 100%;
+  }
+  .scroll {
+    /* Proprietà per la navbar fissa */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 50%);
+    /* Transizione per un effetto fluido */
+    transition: all 0.5s ease;
+  }
+  
+  .scroll.scrolled {
+    /* Modifiche quando la navbar è scrolled (quando l'utente ha scrollato) */
+    background-color: rgba(0, 0, 0, 0.9); /* Cambia il colore di sfondo per l'effetto */
+    padding: 10px 0; /* Riduci l'altezza della navbar */
   }
